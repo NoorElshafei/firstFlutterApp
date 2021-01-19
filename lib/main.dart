@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+import 'FirstScreen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,8 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Welcome to Flutter',
       theme: ThemeData(fontFamily: 'Tajawal-Extrabold'),
-      home:
-          RandomWords() /*Scaffold(
+      home: new FirstScreen()
+      // RandomWords()
+      /*Scaffold(
           appBar: AppBar(
             title: const Text('Welcome to Flutter'),
           ),
@@ -84,27 +87,27 @@ class _RandomWordsState extends State<RandomWords> {
   _buildRow(Color color) {
     return Container(
         height: 82,
-     child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-        ),
-        elevation: 0,
-        color: color,
-        child: ListTile(
-          leading: Image.asset('assets/images/nooor.png',
-              fit: BoxFit.fill,
-              height: double.infinity,
-              alignment: Alignment.center),
-          title: Text(
-            'تجميل عرائس',
-            textAlign: TextAlign.right,
-            style: TextStyle(
-                fontSize: 18,
-                fontFamily: 'Tajawal-Extrabold',
-                color: color.withOpacity(1)),
-          ),
-          contentPadding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
-        )));
+        child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            elevation: 0,
+            color: color,
+            child: ListTile(
+              leading: Image.asset('assets/images/nooor.png',
+                  fit: BoxFit.fill,
+                  height: double.infinity,
+                  alignment: Alignment.center),
+              title: Text(
+                'تجميل عرائس',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'Tajawal-Extrabold',
+                    color: color.withOpacity(1)),
+              ),
+              contentPadding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+            )));
   }
 
   @override
